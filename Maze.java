@@ -1,6 +1,67 @@
 /* This class should implement the DisplayableMaze interface */
-public class Maze{
+public class Maze implements DisplayableMaze{
+  private int height;
+  
+  private int width;
 
+  private MazeContents [] [] mazeGrid;
+
+  private MazeLocation start;
+  
+  private MazeLocation finish;
+
+
+    /** @return height of maze grid */
+    public int getHeight(){
+      return height;
+
+    }
+
+    /** @return width of maze grid */
+    public int getWidth(){
+      return width;
+
+    }
+
+    /** @return contents of maze grid at row i, column j */
+    public MazeContents getContents(int i, int j){
+      return mazeGrid[i][j];
+
+    }
+
+    /** @return return True or False to indicate whether the maze grid is explorable at row i, column j */
+    public Boolean checkExplorable(int i, int j){
+      return isExplorable(i, j);
+
+    }
+
+    /** @return location of maze start point */
+    public MazeLocation getStart(){
+      return start ;
+  
+
+    }
+
+    /** @return location of maze finish point */
+    public MazeLocation getFinish(){
+      return finish;
+
+    }
+
+    public boolean isExplorable(int i, int j){
+
+        if ((0 > i) || (0 > j)){
+        return false;
+      } else if(i >= height || j >= width){
+        return false;
+      } else if (mazeGrid[i][j] == MazeContents.WALL){
+        return false;
+      } else if (mazeGrid[i][j] == MazeContents.VISITED){
+        return false;
+      } else {
+        return true;
+      }
+}
 
     /** This DemoMaze method will allow you to generate a simple maze
      * to test your code on as you develop it. Ultimately, you need
