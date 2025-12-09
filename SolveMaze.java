@@ -1,5 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 class SolveMaze {
 
@@ -12,16 +14,24 @@ class SolveMaze {
       System.exit(-1);  
     }
 
+    // arraylist that'll hold each line of file
+    ArrayList<String> tempMaze = new ArrayList<>();
+
+    // read each line in the file and add it to an arraylist
     while (file.hasNextLine()) {
       String line = file.nextLine();
-      encodeMaze(line);
+      tempMaze.add(line);
     }
+
+    // convert the arraylist tempMaze to an array
+    String[] maze = tempMaze.toArray(new String[0]);
+    encodeMaze(maze);
 
     // ask why we are returning the file
     return file;
   }
 
-  public static void encodeMaze(String line) {
+  public static void encodeMaze(String[] maze) {
     if (c == '#') {
       
     }
