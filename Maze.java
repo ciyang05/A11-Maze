@@ -63,6 +63,24 @@ public class Maze implements DisplayableMaze{
       }
 }
 
+/**
+ * 
+ * @param current
+ * @return
+ */
+private boolean solveRecursive(MazeLocation current) {
+  
+  // Small delay for animation
+  try {
+    Thread.sleep(50);
+  } catch (InterruptedException e) {}
+
+  int row = current.getRow();
+  int col = current.getCol();
+}
+
+
+
     /** This DemoMaze method will allow you to generate a simple maze
      * to test your code on as you develop it. Ultimately, you need
      * to accept maze files as command line inputs or standard input.
