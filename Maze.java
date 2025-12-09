@@ -89,5 +89,18 @@ public class Maze implements DisplayableMaze{
         this.mazeGrid[8][0] = MazeContents.WALL; this.mazeGrid[8][1] = MazeContents.OPEN; this.mazeGrid[8][2] = MazeContents.OPEN; this.mazeGrid[8][3] = MazeContents.WALL; this.mazeGrid[8][4] = MazeContents.OPEN; this.mazeGrid[8][5] = MazeContents.WALL; this.mazeGrid[8][6] = MazeContents.OPEN; this.mazeGrid[8][7] = MazeContents.WALL;
         this.mazeGrid[9][0] = MazeContents.WALL; this.mazeGrid[9][1] = MazeContents.WALL; this.mazeGrid[9][2] = MazeContents.WALL; this.mazeGrid[9][3] = MazeContents.WALL; this.mazeGrid[9][4] = MazeContents.WALL; this.mazeGrid[9][5] = MazeContents.WALL; this.mazeGrid[9][6] = MazeContents.WALL; this.mazeGrid[9][7] = MazeContents.WALL;
   }
+  
+  //Testing
+  public static void main(String args[]){
+    Maze maze = new Maze();
+    maze.initDemoMaze();
 
+    System.out.println("Height" + maze.getHeight());
+    System.out.println("Width" + maze.getWidth());
+    System.out.println("Start" + maze.getStart());
+    System.out.println("Finish" + maze.getFinish());
+    System.out.println("Contents at (1,1)" + maze.getContents(1, 1));
+    System.out.println("Check (1,1)" + maze.checkExplorable(1, 1));
+    System.out.println("Check (0,0)"+ maze.checkExplorable(0, 0));
+  }
 }
