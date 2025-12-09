@@ -11,7 +11,21 @@ class SolveMaze {
       System.err.println("Cannot locate file.");
       System.exit(-1);  
     }
+
+    while (file.hasNextLine()) {
+      String line = file.nextLine();
+      encodeMaze(line);
+    }
+
+    // ask why we are returning the file
     return file;
+  }
+
+  public static void encodeMaze(String line) {
+    if (c == #) {
+      
+    }
+
   }
   
   public static void main(String[] args) {
