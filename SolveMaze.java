@@ -22,7 +22,7 @@ class SolveMaze {
   }
 
   public static void encodeMaze(String line) {
-    if (c == #) {
+    if (c == '#') {
       
     }
 
