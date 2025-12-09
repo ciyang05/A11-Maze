@@ -14,27 +14,28 @@ class SolveMaze {
       System.exit(-1);  
     }
 
-    // arraylist that'll hold each line of file
-    ArrayList<String> tempMaze = new ArrayList<>();
+    // arraylist that'll hold arrays 
+    // each array will consist of a line's characters
+    ArrayList<char[]> tempMaze = new ArrayList<>();
 
-    // read each line in the file and add it to an arraylist
+    // read each line in the file and convert it into an array
+    // add the array to tempMaze
     while (file.hasNextLine()) {
-      String line = file.nextLine();
-      tempMaze.add(line);
+      char[] charArray = file.nextLine().toCharArray();
+      tempMaze.add(charArray);
     }
 
     // convert the arraylist tempMaze to an array
-    String[] maze = tempMaze.toArray(new String[0]);
+    char[][] maze = tempMaze.toArray(new char[0]);
     encodeMaze(maze);
 
-    // ask why we are returning the file
+
     return file;
   }
 
-  public static void encodeMaze(String[] maze) {
-    if (c == '#') {
-      
-    }
+  public static void encodeMaze(char[][] maze) {
+    int height = maze.length;
+    int width = maze.
 
   }
   
