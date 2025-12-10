@@ -80,6 +80,10 @@ private boolean solveRecursive(MazeLocation current) {
 }
 
 
+  mazeGrid[row][col] = MazeContents.VISITED;
+
+
+
 
     /** This DemoMaze method will allow you to generate a simple maze
      * to test your code on as you develop it. Ultimately, you need
