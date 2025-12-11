@@ -82,7 +82,7 @@ private boolean solveRecursive(MazeLocation current) {
   
   // add a short delay so the viewer can animate the search
   try {
-    Thread.sleep(50);
+    Thread.sleep(7);
   } catch (InterruptedException e) {}
 
   int row = current.getRow();
