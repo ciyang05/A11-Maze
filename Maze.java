@@ -64,25 +64,59 @@ public class Maze implements DisplayableMaze{
 }
 
 /**
- * 
- * @param current
- * @return
+ * starts solving the maze from the start location using recursion
+ * @return true if a path to the finish is found and false if not
+ */
+public boolean solve(){
+  return solveRecursive(getStart());
+}
+
+/**
+ * explore the maze from a given location recursively
+ * marks cells as visited, dead ends, or part of the path
+ * includes a small delay to allow animation in the viewer
+ * @param current the location that is being explored currently
+ * @return true if the finish can be reached from this location
  */
 private boolean solveRecursive(MazeLocation current) {
   
-  // Small delay for animation
+  // add a short delay so the viewer can animate the search
   try {
     Thread.sleep(50);
   } catch (InterruptedException e) {}
 
   int row = current.getRow();
   int col = current.getCol();
-}
 
+  //if we reached the finish, mark it as part of the path and return true
+  if (current.equals(getFinish())){
+    mazeGrid[row][col]= MazeContents.PATH;
+    return true;
+  }
 
+  //if this cell is not explorable, stop exploring this path
+  if (!isExplorable(row, col)){
+    return false;
+  }
+
+  //mark current cell as visited before checking neighbors 
   mazeGrid[row][col] = MazeContents.VISITED;
 
+  // try all four directions: north, south, east, west
+  boolean found = solveRecursive(current.neighbor(MazeDirection.NORTH));
+  if (!found) found = solveRecursive(current.neighbor(MazeDirection.SOUTH));
+  if (!found) found = solveRecursive(current.neighbor(MazeDirection.EAST));
+  if (!found) found = solveRecursive(current.neighbor(MazeDirection.WEST));
 
+  //after exploring, mark cell as path or dead end 
+  if (found) {
+    mazeGrid[row][col] = MazeContents.PATH;
+  } else {
+    mazeGrid[row][col] = MazeContents.DEAD_END;
+  }
+
+  return found;
+}
 
 
     /** This DemoMaze method will allow you to generate a simple maze
