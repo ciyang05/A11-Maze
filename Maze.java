@@ -29,7 +29,22 @@ public class Maze implements DisplayableMaze{
 
     }
 
-    /** @return return True or False to indicate whether the maze grid is explorable at row i, column j */
+    /**
+     * 
+     * @param i
+     * @param j
+     * @param value
+     */
+    public void setContents(int i, int j, MazeContents value) {
+     mazeGrid[i][j] = value;
+ }
+
+    /** 
+     * @param i 
+     * @param j
+     * @return return True or False to indicate whether the maze grid is explorable at row i, column j 
+     * 
+     * */
     public Boolean checkExplorable(int i, int j){
       return isExplorable(i, j);
 
@@ -47,6 +62,13 @@ public class Maze implements DisplayableMaze{
       return finish;
 
     }
+
+    /**
+     * 
+     * @param i
+     * @param j
+     * @return True or False to indicate if the maze is explorable
+     */
 
     public boolean isExplorable(int i, int j){
 
@@ -119,6 +141,8 @@ private boolean solveRecursive(MazeLocation current) {
 }
 
 
+
+
     /** This DemoMaze method will allow you to generate a simple maze
      * to test your code on as you develop it. Ultimately, you need
      * to accept maze files as command line inputs or standard input.
@@ -147,16 +171,16 @@ private boolean solveRecursive(MazeLocation current) {
   }
   
   //Testing
-  public static void main(String args[]){
-    Maze maze = new Maze();
-    maze.initDemoMaze();
+//   public static void main(String args[]){
+//     Maze maze = new Maze();
+//     maze.initDemoMaze();
 
-    System.out.println("Height" + maze.getHeight());
-    System.out.println("Width" + maze.getWidth());
-    System.out.println("Start" + maze.getStart());
-    System.out.println("Finish" + maze.getFinish());
-    System.out.println("Contents at (1,1)" + maze.getContents(1, 1));
-    System.out.println("Check (1,1)" + maze.checkExplorable(1, 1));
-    System.out.println("Check (0,0)"+ maze.checkExplorable(0, 0));
-  }
+//     System.out.println("Height" + maze.getHeight());
+//     System.out.println("Width" + maze.getWidth());
+//     System.out.println("Start" + maze.getStart());
+//     System.out.println("Finish" + maze.getFinish());
+//     System.out.println("Contents at (1,1)" + maze.getContents(1, 1));
+//     System.out.println("Check (1,1)" + maze.checkExplorable(1, 1));
+//     System.out.println("Check (0,0)"+ maze.checkExplorable(0, 0));
+//   }
 }
