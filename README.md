@@ -20,3 +20,5 @@ In phase four, what method did you choose to store the extra data?  Why did you 
 Reflection on your experience with this assignment:
 
 Kiara Sunil Singh - I enjoyed this assignment because I liked applying graph theory to a real life game! I found that this assignment made graph properties more understandable because I got a hands on perspective about how they work and what you can do with them. Initially, I found it difficult to understand how a graph works and how to use them in an effectdive way, but eventually I learned more about how to traverse through a graph and keep track of where the user is currently at. 
+
+Shakila Jafari-  I guess my main question now is if there’s an easy way to see the order of the recursive calls without the animation, just to understand it better. Other than that, this assignment was fun and made recursion feel a lot less abstract for me. The hardest part was getting it to actually find the path but overall I liked it. 
