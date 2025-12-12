@@ -86,7 +86,7 @@ class SolveMaze {
     }
     Scanner file = readMaze(args[0]);
     
-    // Maze maze = new Maze();
-    // MazeViewer viewer = new MazeViewer(maze);
+    Maze maze = new Maze();
+    MazeViewer viewer = new MazeViewer(maze);
   }
 }
