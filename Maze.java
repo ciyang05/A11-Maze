@@ -29,6 +29,16 @@ public class Maze implements DisplayableMaze{
 
     }
 
+    /**
+     * @param i
+     * @param j
+     * @param value
+     */
+    public void setContents(int i, int j, MazeContents value) {
+      mazeGrid[i][j] = value;
+  }
+  
+
     /** @return return True or False to indicate whether the maze grid is explorable at row i, column j */
     public Boolean checkExplorable(int i, int j){
       return isExplorable(i, j);
