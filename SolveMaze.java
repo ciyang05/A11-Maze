@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 class SolveMaze {
 
+    /**
+     * @param fname
+     * @return
+     */
     public static Scanner readMaze(String fname) {
         Scanner file = null;
         try {
@@ -15,6 +19,10 @@ class SolveMaze {
         return file;
     }
 
+    /**
+     * @param file
+     * @return
+     */
     public static Maze buildMaze(Scanner file) {
         ArrayList<String> lines = new ArrayList<>();
 
@@ -58,7 +66,10 @@ class SolveMaze {
 
 
   
-  public static void main(String[] args) {
+  /**
+ * @param args
+ */
+public static void main(String[] args) {
     if(args.length <= 0){
       System.err.println("Please provide the name of the maze file.");
       System.exit(-1);

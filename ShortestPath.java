@@ -2,8 +2,14 @@ import java.util.*;
 
 public class ShortestPath {
     
+    /**
+     *
+     */
     private static final int INF = Integer.MAX_VALUE;
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         Maze maze = new Maze();
         maze.initDemoMaze();
