@@ -1,14 +1,14 @@
 /* This class should implement the DisplayableMaze interface */
 public class Maze implements DisplayableMaze{
-  private int height;
+  int height;
   
-  private int width;
+  int width;
 
-  private MazeContents [] [] mazeGrid;
+  MazeContents [] [] mazeGrid;
 
-  private MazeLocation start;
+  MazeLocation start;
   
-  private MazeLocation finish;
+  MazeLocation finish;
 
 
     /** @return height of maze grid */
