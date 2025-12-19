@@ -10,41 +10,41 @@ your work, please indicate the status of each item
 
 ## Assignment Points:
 
-_____ 1 pt: Maze class implements DisplayableMaze interface
+_YES____ 1 pt: Maze class implements DisplayableMaze interface
 
-_____ 2 pts: `solve` method correctly determines if solution exists
+__YES___ 2 pts: `solve` method correctly determines if solution exists
 
-_____ 2 pts: `solve` method uses recursion
+___YES__ 2 pts: `solve` method uses recursion
 
-_____ 1 pts: `isExplorable` correctly identifies explorable locations
+___YES__ 1 pts: `isExplorable` correctly identifies explorable locations
 
-_____ 1 pts: recursive style is simple and direct
+___YES__ 1 pts: recursive style is simple and direct
 
-_____ 1 pts: Encodes maze contained in a text file
+___YES__ 1 pts: Encodes maze contained in a text file
 
-_____ 1 pts: ShortestPath implements Dijkstra's algorithm to find the shortest path
+___YES__ 1 pts: ShortestPath implements Dijkstra's algorithm to find the shortest path
 
-_____ 1 pts: Secondary storage for ShortestPath uses well-reasoned data structures
+___YES__ 1 pts: Secondary storage for ShortestPath uses well-reasoned data structures
 
 
 ## General Items:
 
-_____ 4 pts: Program compiles without errors or warnings
+___YES__ 4 pts: Program compiles without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+___YES__ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
-_____ 2 pt: Complies with style guidelines (missing items 1 pt each):
+___YES__ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
-      _____ Classes & class members all have Javadoc header comments
+      ___YES__ Classes & class members all have Javadoc header comments
 
-      _____ Clear and consistent indentation of bracketed sections
+      ___YES__ Clear and consistent indentation of bracketed sections
 
-      _____ Adheres to Java conventions on naming & capitalization
+      ___YES__ Adheres to Java conventions on naming & capitalization
 
-      _____ Methods & variables all have clear and accurate names
+      ___YES__ Methods & variables all have clear and accurate names
 
-      _____ Methods avoid confusing side effects
+      ___YES__ Methods avoid confusing side effects
 
-_____ 1 pt: All required files included with submission & named correctly (including completed checklist file)
+___YES__ 1 pt: All required files included with submission & named correctly (including completed checklist file)
 
-_____ 1 pt: readme.md contains reflection on the assignment
+___YES_ 1 pt: readme.md contains reflection on the assignment
